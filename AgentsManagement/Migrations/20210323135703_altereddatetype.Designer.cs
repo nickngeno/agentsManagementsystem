@@ -3,14 +3,16 @@ using AgentsManagement.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AgentsManagement.Migrations
 {
     [DbContext(typeof(AgentContext))]
-    partial class AgentContextModelSnapshot : ModelSnapshot
+    [Migration("20210323135703_altereddatetype")]
+    partial class altereddatetype
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -13,12 +13,17 @@ namespace AgentsManagement.Models
 
         [MaxLength(50)]
         [Required]
-        public string AgentName { get; set; }
+        public string FirstName { get; set; }
+
+        [MaxLength(50)]
+        [Required]
+        public string LastName { get; set; }
 
         [MaxLength(50)]
         [Required]
         public string Department { get; set; }
 
+        [Required]
         public string DateofJoining { get; set; }
 
         public string Picture { get; set; }

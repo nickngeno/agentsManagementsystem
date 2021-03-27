@@ -1,9 +1,11 @@
 ﻿using AgentsManagement.DataService;
 using AgentsManagement.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,9 +15,11 @@ namespace AgentsManagement.Controllers
     public class AgentController : ControllerBase
     {
         private IAgent _agentdata;
-        public AgentController(IAgent agentdata)
+        private IWebHostEnvironment _env;
+        public AgentController(IAgent agentdata, IWebHostEnvironment env)
         {
-            _agentdata = agentdata;   
+            _agentdata = agentdata;
+            _env = env;
         }
         [HttpGet]
         [Route("api/[controller]")]
@@ -76,5 +80,28 @@ namespace AgentsManagement.Controllers
             }
             
         }
+        [HttpPost]
+        [Route("api/[controller]/saveprofile")]
+        public IActionResult Savefile()
+        {
+            try
+            {
+                var httprequest = Request.Form;
+                var requestfile = httprequest.Files[0];
+                var filename = requestfile.FileName;
+                var physicalpath = _env.ContentRootPath + "/Photos/" + filename;
+
+                using (var stream = new FileStream(physicalpath, FileMode.Create))
+                {
+                    requestfile.CopyTo(stream);
+                }
+                return new JsonResult(filename);
+            }
+            catch(Exception)
+            {
+                return NotFound("anonymous.png");
+            }
+        }
+      
     }
 }
