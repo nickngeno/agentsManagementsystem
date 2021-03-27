@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\root\\Documents\\MyProjects\\AgentsManagement\\AgentsManagement\\AgentsManagement.csproj": {}
+    "C:\\Users\\v-ninge\\Desktop\\agentsManagementsystem\\AgentsManagement\\AgentsManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\root\\Documents\\MyProjects\\AgentsManagement\\AgentsManagement\\AgentsManagement.csproj": {
+    "C:\\Users\\v-ninge\\Desktop\\agentsManagementsystem\\AgentsManagement\\AgentsManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\root\\Documents\\MyProjects\\AgentsManagement\\AgentsManagement\\AgentsManagement.csproj",
+        "projectUniqueName": "C:\\Users\\v-ninge\\Desktop\\agentsManagementsystem\\AgentsManagement\\AgentsManagement.csproj",
         "projectName": "AgentsManagement",
-        "projectPath": "C:\\Users\\root\\Documents\\MyProjects\\AgentsManagement\\AgentsManagement\\AgentsManagement.csproj",
-        "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\root\\Documents\\MyProjects\\AgentsManagement\\AgentsManagement\\obj\\",
+        "projectPath": "C:\\Users\\v-ninge\\Desktop\\agentsManagementsystem\\AgentsManagement\\AgentsManagement.csproj",
+        "packagesPath": "C:\\Users\\v-ninge\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\v-ninge\\Desktop\\agentsManagementsystem\\AgentsManagement\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\v-ninge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -56,7 +59,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[5.6.3, )"
+              "version": "[6.1.1, )"
             }
           },
           "imports": [

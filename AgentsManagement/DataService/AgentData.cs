@@ -37,7 +37,8 @@ namespace AgentsManagement.DataService
             if(existingAgent != null)
             {
                 existingAgent.AgentId = agent.AgentId;
-                existingAgent.AgentName = agent.AgentName;
+                existingAgent.FirstName = agent.FirstName;
+                existingAgent.LastName = agent.LastName;
                 existingAgent.Department = agent.Department;
                 existingAgent.DateofJoining = agent.DateofJoining;
                 existingAgent.Picture = agent.Picture;
